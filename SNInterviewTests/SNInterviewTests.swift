@@ -9,13 +9,18 @@ import XCTest
 @testable import SNInterview
 
 class SNInterviewTests: XCTestCase {
+    
+    // sut = Subject Under Test
+    var sut: CoffeeShopViewModel!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        sut = CoffeeShopViewModel()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+        super.tearDown()
     }
 
     func testCoffeeShop() {
@@ -26,6 +31,16 @@ class SNInterviewTests: XCTestCase {
     }
     
     func testLoadFromJSON() {
-        // TODO: load coffee shops from json and make sure they are loaded correctly
+        let coffeeJSONData = sut.getData()
+        
+        // Test if the data coming from JSON is not nil
+        for coffeeData in coffeeJSONData {
+            XCTAssertNotNil(coffeeData.name)
+            XCTAssertNotNil(coffeeData.rating)
+            XCTAssertNotNil(coffeeData.review)
+        }
+        
+        // Test the count of JSON, in this case 5
+        XCTAssertEqual(coffeeJSONData.count, 5)
     }
 }
