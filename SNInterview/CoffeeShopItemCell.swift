@@ -1,5 +1,5 @@
 //
-//  CoffeeShopItemView.swift
+//  CoffeeShopItemCell.swift
 //  SNInterview
 //
 //  Copyright © 2019 ServiceNow. All rights reserved.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CoffeeShopItemView: UIView {
+class CoffeeShopItemCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var reviewLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
