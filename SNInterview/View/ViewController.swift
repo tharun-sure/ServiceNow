@@ -9,12 +9,15 @@ import UIKit
 
 class ViewController: UITableViewController {
         
+    // Created the ViewModel which loads the JSON/make API calls
+    // Following MVVM design pattern
     private var coffeeShopViewModel = CoffeeShopViewModel()
     private var reviews: [CoffeeShop] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Re-using the CoffeShopItemView as the CoffeeShopItemCell
         self.tableView.register(UINib(nibName: "CoffeeShopItemCell", bundle: nil), forCellReuseIdentifier: "CoffeeShopItemCell")
         
         getData()
@@ -37,6 +40,7 @@ class ViewController: UITableViewController {
         reviews.count
     }
     
+    // This will display the Name and Rating in the table view
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CoffeeShopItemCell", for: indexPath) as? CoffeeShopItemCell else { return UITableViewCell() }
         cell.nameLabel.text = reviews[indexPath.row].name
@@ -45,6 +49,7 @@ class ViewController: UITableViewController {
         return cell
     }
     
+    // This will show the review when we tap on the cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         let reviewViewController = storyBoard.instantiateViewController(withIdentifier: "ReviewViewController") as! ReviewViewController
