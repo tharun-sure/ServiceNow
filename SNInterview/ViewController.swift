@@ -13,12 +13,7 @@ struct CoffeeShop {
     let rating: Int
 }
 
-//protocol CoffeeShopTapDelegate {
-//    func didSelectItem(_ item: UIView?)
-//}
-
 class ViewController: UITableViewController {
-//    var delegate: CoffeeShopTapDelegate!
         
     private let reviews = [
         CoffeeShop(name:"Lofty", review: "Knowledgeable staff, stacked menu. Trust the Ethiopian in a pour over if you know your flavors. Will be back for the rest of this menu soon.", rating: 4),
@@ -33,7 +28,6 @@ class ViewController: UITableViewController {
         
         self.tableView.register(UINib(nibName: "CoffeeShopItemCell", bundle: nil), forCellReuseIdentifier: "CoffeeShopItemCell")
         
-//        delegate = CoffeeShopDetailsHandler()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,11 +36,6 @@ class ViewController: UITableViewController {
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
     }
-    
-//    @objc
-//    func onTap(item: UIView) {
-//        delegate.didSelectItem(nil)
-//    }
     
     //MARK: Table View
     
@@ -57,18 +46,18 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CoffeeShopItemCell", for: indexPath) as? CoffeeShopItemCell else { return UITableViewCell() }
         cell.nameLabel.text = reviews[indexPath.row].name
-        cell.reviewLabel.text = reviews[indexPath.row].review
         cell.ratingLabel.text = "Rating: \(Int(reviews[indexPath.row].rating))"
         cell.layoutIfNeeded()
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        let reviewViewController = storyBoard.instantiateViewController(withIdentifier: "ReviewViewController") as! ReviewViewController
+        if  let indexPath = tableView.indexPathForSelectedRow?.row {
+            reviewViewController.reviewLabelString = reviews[indexPath].review
+        }
+        
+        self.navigationController?.pushViewController(reviewViewController, animated: true)
+    }
 }
-
-//class CoffeeShopDetailsHandler: CoffeeShopTapDelegate {
-//    func didSelectItem(_ item: UIView?) {
-//        let tapped = item as? CoffeeShopItemCell
-//
-//        // TODO: display the item's details
-//        print("Item Tapped: \(tapped)")
-//    }
-//}

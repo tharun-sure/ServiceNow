@@ -9,42 +9,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="143" id="sqD-kj-GG0" customClass="CoffeeShopItemCell" customModule="SNInterview" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="67" id="sqD-kj-GG0" customClass="CoffeeShopItemCell" customModule="SNInterview" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sqD-kj-GG0" id="ygb-df-XVy">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJP-Uo-cIa" userLabel="Name">
-                        <rect key="frame" x="20" y="5" width="374" height="17"/>
+                        <rect key="frame" x="20" y="5" width="374" height="28.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtX-Ke-g68" userLabel="Rating">
-                        <rect key="frame" x="20" y="119.5" width="374" height="13.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="80 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtX-Ke-g68" userLabel="Rating">
+                        <rect key="frame" x="20" y="43.5" width="374" height="13.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlA-Vf-jg8" userLabel="Review">
-                        <rect key="frame" x="20" y="32" width="374" height="77.5"/>
-                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="TtX-Ke-g68" secondAttribute="trailing" constant="20" id="8pL-v0-yQF"/>
-                    <constraint firstItem="OlA-Vf-jg8" firstAttribute="top" secondItem="mJP-Uo-cIa" secondAttribute="bottom" constant="10" id="Fvp-fS-dgq"/>
-                    <constraint firstItem="TtX-Ke-g68" firstAttribute="top" secondItem="OlA-Vf-jg8" secondAttribute="bottom" constant="10" id="J7N-Dx-Gns"/>
+                    <constraint firstItem="TtX-Ke-g68" firstAttribute="top" secondItem="mJP-Uo-cIa" secondAttribute="bottom" constant="10" id="AFb-wN-hgj"/>
                     <constraint firstItem="mJP-Uo-cIa" firstAttribute="top" secondItem="ygb-df-XVy" secondAttribute="top" constant="5" id="R4i-RQ-LE1"/>
                     <constraint firstItem="TtX-Ke-g68" firstAttribute="leading" secondItem="ygb-df-XVy" secondAttribute="leading" constant="20" id="RjG-eq-8A5"/>
-                    <constraint firstAttribute="trailing" secondItem="OlA-Vf-jg8" secondAttribute="trailing" constant="20" id="WGf-Sh-rfg"/>
                     <constraint firstItem="mJP-Uo-cIa" firstAttribute="leading" secondItem="ygb-df-XVy" secondAttribute="leading" constant="20" id="ixT-r5-Fun"/>
-                    <constraint firstItem="OlA-Vf-jg8" firstAttribute="leading" secondItem="ygb-df-XVy" secondAttribute="leading" constant="20" id="k9z-Po-xRL"/>
                     <constraint firstAttribute="bottom" secondItem="TtX-Ke-g68" secondAttribute="bottom" constant="10" id="oJG-I4-53r"/>
                     <constraint firstAttribute="trailing" secondItem="mJP-Uo-cIa" secondAttribute="trailing" constant="20" id="tE8-w4-XJe"/>
                 </constraints>
@@ -52,9 +42,8 @@
             <connections>
                 <outlet property="nameLabel" destination="mJP-Uo-cIa" id="D6H-yz-VtD"/>
                 <outlet property="ratingLabel" destination="TtX-Ke-g68" id="1kw-fg-dcb"/>
-                <outlet property="reviewLabel" destination="OlA-Vf-jg8" id="9tJ-6e-cVi"/>
             </connections>
-            <point key="canvasLocation" x="37.681159420289859" y="121.54017857142857"/>
+            <point key="canvasLocation" x="37.681159420289859" y="96.09375"/>
         </tableViewCell>
     </objects>
 </document>

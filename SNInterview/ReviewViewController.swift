@@ -12,7 +12,10 @@ class ReviewViewController: UIViewController {
     
     @IBOutlet weak var reviewLabel: UILabel!
     
+    var reviewLabelString = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        reviewLabel.text = reviewLabelString
     }
 }

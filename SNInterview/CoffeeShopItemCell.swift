@@ -9,6 +9,5 @@ import UIKit
 
 class CoffeeShopItemCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var reviewLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
 }

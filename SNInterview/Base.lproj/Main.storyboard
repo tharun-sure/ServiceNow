@@ -41,9 +41,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="adV-F3-qKl" kind="show" id="zgY-wB-Jxq"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -60,13 +57,13 @@
         <!--Review View Controller-->
         <scene sceneID="qLa-di-TZI">
             <objects>
-                <viewController id="adV-F3-qKl" customClass="ReviewViewController" customModule="SNInterview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReviewViewController" id="adV-F3-qKl" customClass="ReviewViewController" customModule="SNInterview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mZY-FV-FXG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M2-rC-Wry">
-                                <rect key="frame" x="20" y="125" width="59" height="21"/>
+                                <rect key="frame" x="20" y="81" width="59" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="QMk-Rt-3p6"/>
                                     <constraint firstAttribute="height" constant="21" id="VVE-8y-idm"/>
@@ -76,7 +73,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lac-BN-8AF">
-                                <rect key="frame" x="99" y="125" width="295" height="20.5"/>
+                                <rect key="frame" x="99" y="81" width="295" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
